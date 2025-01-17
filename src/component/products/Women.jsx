@@ -21,7 +21,7 @@ const Women = () => {
   }, []);
   return (
     <div>
-       <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-[85%] mx-auto gap-6">
+       <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-[85%] mx-auto gap-6">
           {products.map((product) => (
             <Link key={product.id} to={`/product/${product.id}`} className="bg-white  hover:shadow-xl transform transition-transform duration-300 hover:scale-105 p-4">
             <img
