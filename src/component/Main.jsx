@@ -26,7 +26,7 @@ const Main = () => {
         <Route path="/" element={<ProductLists />} />
         <Route path="/men" element={<Men onAddToCart={handleAddToCart} />} />
         <Route path="/women" element={<Women />} />
-        <Route path="/jeweries" element={<Jeweries />} />
+        <Route path="/jewelries" element={<Jeweries />} />
         <Route path="/electronics" element={<Electronics />} />
         <Route
           path="/product/:productId"
