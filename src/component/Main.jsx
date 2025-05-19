@@ -19,6 +19,15 @@ const Main = () => {
     setCart((prevCart) => [...prevCart, product]);
   };
 
+  const handleRemoveFromCart = () => {
+    setCart([]);
+  };
+
+  // Remove a single product from cart by id without refreshing the page
+  const handleRemoveItem = (productId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  };
+
   return (
     <>
       <Header cartCount={cart.length} />
@@ -32,7 +41,7 @@ const Main = () => {
           path="/product/:productId"
           element={<ProductDetails onAddToCart={handleAddToCart} />}
         />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/cart" element={<Cart cart={cart} onRemoveAll={handleRemoveFromCart} remove={handleRemoveItem} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>

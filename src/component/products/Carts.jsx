@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ cart, onRemove, onQuantityChange, onClear }) => {
+const Cart = ({ cart, onRemoveAll, onQuantityChange, remove }) => {
   // Calculate total price
   const total = cart.reduce(
     (sum, item) => sum + item.price * (item.quantity || 1),
@@ -45,7 +45,7 @@ const Cart = ({ cart, onRemove, onQuantityChange, onClear }) => {
                 </div>
                 <button
                   className="ml-4 px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
-                  onClick={() => onRemove(item)}
+                  onClick={() => remove(item)}
                 >
                   Remove
                 </button>
@@ -56,7 +56,7 @@ const Cart = ({ cart, onRemove, onQuantityChange, onClear }) => {
             <span className="text-xl font-bold">Total: ${total.toFixed(2)}</span>
             <button
               className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-800"
-              onClick={onClear}
+              onClick={onRemoveAll}
             >
               Clear Cart
             </button>

@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Men = () => {
+const Men = ({onAddToCart}) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [search, setSearch] = useState(""); // Search state
@@ -32,6 +32,9 @@ const Men = () => {
       return [...prevCart, { ...product, qty: 1 }];
     });
   };
+
+
+   
 
   const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
@@ -77,12 +80,12 @@ const Men = () => {
               </p>
               <p className="text-xl font-bold text-blue-600">${product.price}</p>
             </Link>
-            <button
-              onClick={() => addToCart(product)}
+            <Link to={`/product/${product.id}`}
+             
               className="mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
             >
-              Add to Cart
-            </button>
+              See Details
+            </Link>
           </div>
         ))}
       </div>
