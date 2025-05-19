@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import img from './images/f5e884102732761.5f3d3d9493dd6.jpg';
+import { Link } from 'react-router-dom';
+import { IoHomeOutline } from "react-icons/io5";
+
 
 const teamMembers = [
   {
@@ -54,6 +57,8 @@ const About = () => {
 
   return (
     <div className="bg-gray-50 text-gray-800">
+      {/* Back Button */}
+    
       {/* Hero Section */}
       <div
         className="relative bg-cover bg-center h-[60vh] flex items-center justify-center"

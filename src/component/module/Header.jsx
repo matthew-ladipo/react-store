@@ -95,12 +95,7 @@ const Header = ({ cartCount }) => {
                 </span>
               )}
             </Link>
-            <div className="relative group">
-              <CgProfile className="text-2xl cursor-pointer hover:text-yellow-400 transition-colors" />
-              <button className="absolute right-0 top-8 bg-gray-800 text-white py-1 px-6 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Logout
-              </button>
-            </div>
+           
           </div>
 
           {/* Mobile Menu Toggle */}

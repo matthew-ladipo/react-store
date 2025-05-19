@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cart = ({ cart, onRemoveAll, onQuantityChange, remove }) => {
   // Calculate total price
@@ -13,6 +14,11 @@ const Cart = ({ cart, onRemoveAll, onQuantityChange, remove }) => {
       {cart.length === 0 ? (
         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mb-4 text-yellow-700 text-center">
           <p>Your cart is empty.</p>
+          <p className="mt-2">
+            <a href="/" className="text-blue-600 hover:underline">
+              Continue Shopping
+            </a>
+            </p>
         </div>
       ) : (
         <>

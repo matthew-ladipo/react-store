@@ -7,7 +7,7 @@ import { FaXTwitter, FaGithub, FaInstagram } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <div className="container py-16 bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen">
+    <div className="container py-16 bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen mx-auto">
       <h2 className="text-5xl font-extrabold text-center mb-14 text-blue-900 drop-shadow">
         Contact Us
       </h2>

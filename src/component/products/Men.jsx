@@ -56,12 +56,12 @@ const Men = ({ onAddToCart }) => {
           Cart
           <span className="ml-2 bg-blue-600 text-white rounded-full px-2 py-0.5 text-xs">{cartCount}</span>
         </div> */}
-        <button
-          onClick={() => navigate(-1)}
+        <Link
+         to={"/"}
           className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition"
         >
           ← Back
-        </button>
+        </Link>
       </div>
       <h2 className="text-3xl font-extrabold text-center mb-8 text-gray-800">
         Men's Clothing

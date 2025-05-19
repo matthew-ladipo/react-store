@@ -191,7 +191,11 @@ const ProductLists = () => {
           <h3 className="mt-4 text-[15px] md:text-[18px] text-blue-100">
             Explore top-quality electronics, trending fashion, and unbeatable deals. Fast shipping, secure payments, and 24/7 support—everything you need for a seamless shopping journey.
           </h3>
-          <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white rounded-full text-base md:text-lg font-semibold shadow-lg transition-all duration-300 animate-bounce">
+          <button
+            className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white rounded-full text-base md:text-lg font-semibold shadow-lg transition-all duration-300 animate-bounce"
+            onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
+            aria-label="Shop Now"
+          >
             Shop Now
           </button>
         </div>

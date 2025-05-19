@@ -46,12 +46,12 @@ const Electronics = () => {
     <div className="py-12 bg-gradient-to-b from-blue-50 to-gray-100 min-h-screen">
       {/* Back Button */}
       <div className="w-[90%] mx-auto mb-6">
-        <button
-          onClick={() => navigate(-1)}
+        <Link
+        to={"/"}
           className="bg-white shadow text-blue-700 px-5 py-2 rounded-lg hover:bg-blue-100 transition font-medium"
         >
           ← Back
-        </button>
+        </Link>
       </div>
       <h2 className="text-4xl font-extrabold text-center mb-10 text-blue-800 tracking-tight drop-shadow">
         Electronics

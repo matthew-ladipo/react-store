@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Women = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("default");
+
+
+  const partName = useLocation().pathname;
 
   const fetchWomenProducts = async () => {
     try {
@@ -51,7 +54,8 @@ const Women = () => {
         <h2 className="text-4xl font-extrabold text-center mb-10 text-pink-700 tracking-tight drop-shadow">
           Women's Clothing
         </h2>
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+        {partName ===  '/women' ? 
+         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <Link
             to="/"
             className="bg-white border border-gray-300 hover:bg-pink-100 text-pink-700 font-semibold px-5 py-2 rounded shadow transition w-full md:w-auto text-center"
@@ -74,7 +78,11 @@ const Women = () => {
             <option value="price-asc">Price: Low to high</option>
             <option value="price-desc">Price: High to low</option>
           </select>
-        </div>
+        </div>  : 
+        <>
+        </>
+      }
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {filteredProducts.map((product) => (
             <div
