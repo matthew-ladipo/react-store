@@ -46,55 +46,62 @@ const Women = () => {
     });
 
   return (
-    <div className="py-10 bg-gray-50 min-h-screen">
-      <h2 className="text-3xl font-extrabold text-center mb-8 text-pink-700">
-        Women's Clothing
-      </h2>
-      <div className="flex flex-col md:flex-row justify-between items-center w-[90%] mx-auto mb-6 gap-4">
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={search}
-          onChange={handleSearch}
-          className="border rounded px-4 py-2 w-full md:w-1/3"
-        />
-        <select
-          value={sort}
-          onChange={handleSort}
-          className="border rounded px-4 py-2 w-full md:w-1/4"
-        >
-          <option value="default">Sort by</option>
-          <option value="price-asc">Price: Low to high</option>
-          <option value="price-desc">Price: High to low</option>
-        </select>
-       
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-[90%] mx-auto">
-        {filteredProducts.map((product) => (
-          <div
-            key={product.id}
-            className="bg-white rounded-lg shadow hover:shadow-2xl transform transition-transform duration-300 hover:scale-105 p-6 flex flex-col items-center"
+    <div className="py-12 bg-gradient-to-b from-pink-50 to-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl font-extrabold text-center mb-10 text-pink-700 tracking-tight drop-shadow">
+          Women's Clothing
+        </h2>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+          <Link
+            to="/"
+            className="bg-white border border-gray-300 hover:bg-pink-100 text-pink-700 font-semibold px-5 py-2 rounded shadow transition w-full md:w-auto text-center"
           >
-            <div className="w-full flex flex-col items-center">
-              <img
-                src={product.image}
-                alt={product.title}
-                className="h-48 w-40 object-contain mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-800 text-center mb-2 line-clamp-2">
-                {product.title}
-              </h3>
-              <p className="text-sm text-pink-600 mb-1">{product.category}</p>
-              <p className="text-xl font-bold text-gray-900">${product.price}</p>
-            </div>
-            <Link
-             to={`/product/${product.id}`} 
-              className="mt-4 bg-pink-600 hover:bg-pink-700 text-white font-semibold px-4 py-2 rounded transition"
+            &larr; Back
+          </Link>
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={search}
+            onChange={handleSearch}
+            className="border-2 border-pink-200 focus:border-pink-400 rounded px-4 py-2 w-full md:w-1/3 shadow-sm transition"
+          />
+          <select
+            value={sort}
+            onChange={handleSort}
+            className="border-2 border-pink-200 focus:border-pink-400 rounded px-4 py-2 w-full md:w-1/4 shadow-sm transition"
+          >
+            <option value="default">Sort by</option>
+            <option value="price-asc">Price: Low to high</option>
+            <option value="price-desc">Price: High to low</option>
+          </select>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {filteredProducts.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-pink-200 transform transition-transform duration-300 hover:scale-105 p-7 flex flex-col items-center border border-pink-100"
             >
-             See Details
-            </Link>
-          </div>
-        ))}
+              <div className="w-full flex flex-col items-center">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="h-48 w-40 object-contain mb-5 drop-shadow"
+                />
+                <h3 className="text-lg font-semibold text-gray-800 text-center mb-2 line-clamp-2">
+                  {product.title}
+                </h3>
+                <p className="text-xs uppercase tracking-wide text-pink-500 mb-1">{product.category}</p>
+                <p className="text-2xl font-bold text-pink-700 mb-2">${product.price}</p>
+              </div>
+              <Link
+                to={`/product/${product.id}`}
+                className="mt-4 bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-2 rounded-full shadow transition"
+              >
+                See Details
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

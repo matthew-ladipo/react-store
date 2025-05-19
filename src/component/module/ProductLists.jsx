@@ -45,8 +45,8 @@ const ProductLists = () => {
     {
       id: 1,
       des:
-        "Dolores porro laboriosam molestias est quo. Et et eos. Ab error modi labore sed eaque est. Quaerat aut est fugiat.",
-      name: "Jack Hallow",
+        "Absolutely love the quality and variety of products! My order arrived quickly and the customer service was fantastic. Highly recommend this store to anyone looking for great deals.",
+      name: "Emily Carter",
       logo: (
         <CgProfile className="stroke-slate-200 shrink-0 text-[30px] text-gray-500" />
       ),
@@ -54,8 +54,8 @@ const ProductLists = () => {
     {
       id: 2,
       des:
-        "Dolorem et cumque consequuntur consequuntur cumque eligendi voluptate. Tempore accusamus tempore consectetur dolor aliquid.",
-      name: "Justin Biber",
+        "The electronics section is top-notch. I found exactly what I needed for my home office, and the checkout process was seamless. Will definitely shop here again.",
+      name: "Michael Lee",
       logo: (
         <CgProfile className="stroke-slate-200 shrink-0 text-[30px] text-gray-500" />
       ),
@@ -63,8 +63,8 @@ const ProductLists = () => {
     {
       id: 3,
       des:
-        "Et eum neque ipsum quaerat ratione qui dolore eos. Numquam quo vel amet expedita eius facere minima. Dolor et saepe consequuntur.",
-      name: "Travis Scout",
+        "I was impressed by the fast shipping and secure packaging. The product matched the description perfectly and works great. Thank you for the excellent service!",
+      name: "Sophia Martinez",
       logo: (
         <CgProfile className="stroke-slate-200 shrink-0 text-[30px] text-gray-500" />
       ),
@@ -72,8 +72,8 @@ const ProductLists = () => {
     {
       id: 4,
       des:
-        "Itaque dicta rerum aliquam sit corporis iste omnis. Officia veritatis vel labore et dolor iste velit distinctio.",
-      name: "LiL Babby",
+        "Customer support was very responsive and helpful when I had a question about my order. It's rare to find such dedication these days. Five stars!",
+      name: "David Kim",
       logo: (
         <CgProfile className="stroke-slate-200 shrink-0 text-[30px] text-gray-500" />
       ),
@@ -81,16 +81,17 @@ const ProductLists = () => {
     {
       id: 5,
       des:
-        "In saepe veniam. Rerum excepturi dolor voluptatibus asperiores ad ut. Veniam molestiae tenetur velit voluptatum.",
-      name: "Shalli Poppi",
+        "The women's fashion collection is amazing! I received so many compliments on my new outfit. The fit and quality exceeded my expectations.",
+      name: "Jessica Brown",
       logo: (
         <CgProfile className="stroke-slate-200 shrink-0 text-[30px] text-gray-500" />
       ),
     },
     {
       id: 6,
-      des: "Saepe doloribus deserunt in. At beatae neque pariatur harum vel.",
-      name: "Tiwa Savage",
+      des:
+        "Easy returns and hassle-free refunds made my shopping experience stress-free. I appreciate the transparency and honesty of this store.",
+      name: "Ahmed Hassan",
       logo: (
         <CgProfile className="stroke-slate-200 shrink-0 text-[30px] text-gray-500" />
       ),
@@ -178,17 +179,17 @@ const ProductLists = () => {
     <>
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-no-repeat text-white min-h-[60vh] md:min-h-[85vh] py-8 px-4 md:py-12 md:pl-16 flex items-center"
+    
+        className="relative bg-cover bg-no-repeat text-white min-h-[60vh] md:min-h-[85vh] py-8 px-4 md:py-12 md:pl-16 flex items-center font-custom"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-blue-900/60 to-black/80 z-0 rounded-lg" />
         <div className="relative z-10 bg-gray-900 bg-opacity-80 p-6 md:p-10 max-w-full md:max-w-[45%] rounded-lg text-center md:text-left shadow-2xl backdrop-blur-sm">
           <p className="text-[28px] md:text-[44px] font-extrabold leading-snug md:leading-tight drop-shadow-lg">
-            The best home entertainment system is here
+            Discover the Ultimate Shopping Experience
           </p>
           <h3 className="mt-4 text-[15px] md:text-[18px] text-blue-100">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            accusamus eius, esse doloribus obcaecati nisi voluptates suscipit.
+            Explore top-quality electronics, trending fashion, and unbeatable deals. Fast shipping, secure payments, and 24/7 support—everything you need for a seamless shopping journey.
           </h3>
           <button className="mt-6 px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-indigo-600 hover:to-blue-500 text-white rounded-full text-base md:text-lg font-semibold shadow-lg transition-all duration-300 animate-bounce">
             Shop Now
@@ -219,7 +220,7 @@ const ProductLists = () => {
       <div className="bg-gradient-to-br from-gray-100 via-blue-50 to-gray-200">
         <div className="container mx-auto py-16">
           <h2 className="text-3xl text-center font-extrabold mb-8 text-blue-900 tracking-tight">
-            Products
+            Featured Products
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-[90%] mx-auto gap-8">
             {products.slice(0, visibleItems).map((product, idx) => (
@@ -247,7 +248,7 @@ const ProductLists = () => {
         id="electronics"
       >
         <h2 className="text-3xl text-center font-extrabold mb-8 text-indigo-900 tracking-tight">
-          Electronics
+          Latest Electronics
         </h2>
         {device.length > 0 && (
           <div className="p-8 relative">
@@ -314,27 +315,28 @@ const ProductLists = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-gradient-to-br from-slate-100 via-blue-50 to-slate-200 pt-8">
-        <h2 className="text-3xl text-center font-extrabold my-8 text-blue-900 tracking-tight">
-          What is everyone saying?
+      <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 pt-12 pb-16">
+        <h2 className="text-4xl text-center font-extrabold mb-12 text-indigo-900 tracking-tight drop-shadow-lg">
+          What Our Customers Say
         </h2>
-        <section className="container w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-12">
+        <section className="container w-[92%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-8">
           {comments.map((comment, index) => (
             <div
               key={comment.id}
-              className="cursor-pointer overflow-hidden relative transition-all duration-500 hover:-translate-y-2 w-full h-48 bg-white rounded-2xl shadow-xl flex flex-row items-center justify-evenly gap-3 p-2 px-5 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-blue-400"
+              className="relative group overflow-hidden transition-all duration-400 hover:-translate-y-2 w-full h-56 bg-gradient-to-br from-white via-blue-100 to-blue-50 rounded-3xl shadow-2xl flex flex-row items-center justify-evenly gap-4 p-6 border border-blue-200 hover:border-indigo-400"
             >
-              <div className="animate-bounce-slow">{comment.logo}</div>
-              <div>
-                <span className="font-bold text-blue-900">{comment.name}</span>
-                <p className="line-clamp-3 font-[300] text-[18px] text-gray-700">{comment.des}</p>
+              <div className="animate-bounce-slow text-indigo-700 group-hover:scale-110 transition-transform duration-300">
+                {comment.logo}
               </div>
+              <div>
+                <span className="font-bold text-indigo-900 text-lg">{comment.name}</span>
+                <p className="line-clamp-3 font-[300] text-[17px] text-gray-700 mt-2">{comment.des}</p>
+              </div>
+              <span className="absolute left-0 top-0 w-full h-1 bg-gradient-to-r from-indigo-400 via-blue-400 to-blue-200 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </section>
       </div>
-
-      {/* Marquee Section */}
       <Marquee pauseOnHover className="bg-white py-8 shadow-inner">
         {images.map((image, index) => (
           <div key={index} className="container py-4">

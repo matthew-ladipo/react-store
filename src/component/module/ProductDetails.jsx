@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 const ProductId = ({ onAddToCart, onAddToWishlist }) => {
@@ -74,6 +74,12 @@ const ProductId = ({ onAddToCart, onAddToWishlist }) => {
 
   return (
     <div className="py-10 px-4 bg-gray-50 min-h-screen">
+       <Link
+          to="/"
+          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded transition w-full md:w-auto text-center"
+        >
+          &larr; Back
+        </Link>
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:flex">
         <div className="md:flex-shrink-0 flex justify-center items-center bg-gray-100 p-6">
           <img
@@ -82,6 +88,7 @@ const ProductId = ({ onAddToCart, onAddToWishlist }) => {
             className="h-64 w-64 object-contain rounded-lg"
           />
         </div>
+         
         <div className="p-8 flex flex-col justify-between">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">{product.title}</h2>

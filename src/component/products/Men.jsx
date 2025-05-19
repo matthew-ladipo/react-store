@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Men = ({onAddToCart}) => {
+const Men = ({ onAddToCart }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [search, setSearch] = useState(""); // Search state
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchMenProducts = async () => {
@@ -33,12 +33,10 @@ const Men = ({onAddToCart}) => {
     });
   };
 
-
-   
+  const navigate = useNavigate();
 
   const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
-  // Filter products based on search
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -53,9 +51,17 @@ const Men = ({onAddToCart}) => {
           onChange={(e) => setSearch(e.target.value)}
           className="px-4 py-2 border rounded w-64"
         />
-        <div className="bg-white shadow rounded px-4 py-2 font-semibold">
-          🛒 Cart: {cartCount} item{cartCount !== 1 ? "s" : ""}
-        </div>
+        {/* <div className="bg-white shadow rounded px-4 py-2 font-semibold flex items-center gap-2">
+          <span role="img" aria-label="cart">🛒</span>
+          Cart
+          <span className="ml-2 bg-blue-600 text-white rounded-full px-2 py-0.5 text-xs">{cartCount}</span>
+        </div> */}
+        <button
+          onClick={() => navigate(-1)}
+          className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition"
+        >
+          ← Back
+        </button>
       </div>
       <h2 className="text-3xl font-extrabold text-center mb-8 text-gray-800">
         Men's Clothing
@@ -66,7 +72,10 @@ const Men = ({onAddToCart}) => {
             key={product.id}
             className="bg-white rounded-lg shadow hover:shadow-2xl transform transition-transform duration-300 hover:scale-105 p-5 flex flex-col items-center"
           >
-            <Link to={`/product/${product.id}`} className="w-full flex flex-col items-center">
+            <Link
+              to={`/product/${product.id}`}
+              className="w-full flex flex-col items-center"
+            >
               <img
                 src={product.image}
                 alt={product.title}
@@ -80,12 +89,15 @@ const Men = ({onAddToCart}) => {
               </p>
               <p className="text-xl font-bold text-blue-600">${product.price}</p>
             </Link>
-            <Link to={`/product/${product.id}`}
+            <div className=" mt-3">
              
-              className="mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-            >
-              See Details
-            </Link>
+              <Link
+                to={`/product/${product.id}`}
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+              >
+                See Details
+              </Link>
+            </div>
           </div>
         ))}
       </div>

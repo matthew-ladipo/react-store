@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+       fontFamily: {
+        custom: ['"MyCustomFont"', 'sans-serif'],
+      },
       colors: {
         primary: '#0f172a', // Customize your brand color
       },
