@@ -70,7 +70,7 @@ const Jeweries = () => {
             to="/"
             className="bg-white hover:bg-purple-100 text-purple-700 font-medium px-4 py-2 rounded-xl transition text-center shadow border border-purple-200"
           >
-            &larr; Back
+            &larr; Back To Home
           </Link>
           <Link
             to="/cart"

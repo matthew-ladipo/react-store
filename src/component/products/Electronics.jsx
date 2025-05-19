@@ -50,7 +50,7 @@ const Electronics = () => {
         to={"/"}
           className="bg-white shadow text-blue-700 px-5 py-2 rounded-lg hover:bg-blue-100 transition font-medium"
         >
-          ← Back
+          ← Back To Home
         </Link>
       </div>
       <h2 className="text-4xl font-extrabold text-center mb-10 text-blue-800 tracking-tight drop-shadow">
